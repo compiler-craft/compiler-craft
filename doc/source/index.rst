@@ -8,6 +8,7 @@ Compiler-Craft's Documentation
 
 .. figure:: .static/logo.png
     :align: center
+    :alt:   LLVM Dragon Logo
 
     **Compiler Craft**
 
