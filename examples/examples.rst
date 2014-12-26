@@ -4,9 +4,7 @@ examples
 The project used several grammer and sub projects to demostrate the theory of compiler craft, all these are listed below:
 
 * calc
-  classic calaulator
-
-.. code-block:: yacc
+  classic calaulator::
 
     program: program statement '\n' | NULL
     statement: expr | VAR '=' expr

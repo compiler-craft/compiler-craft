@@ -12,12 +12,14 @@ Compiler-Craft's Documentation
 
     **Compiler Craft**
 
-你好
-
 Contents:
 
 .. toctree::
    :maxdepth: 2
+
+   intro.rst
+   examples.rst
+   note.rst
 
 .. note:: This is a note
 .. warning:: Warning message
@@ -27,6 +29,9 @@ Contents:
 
 .. include::
     examples.rst
+
+.. include::
+    note.rst
 
 Indices and tables
 ==================
