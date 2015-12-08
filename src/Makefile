@@ -1,3 +1,4 @@
+LDFLAGS := -lm
 targets = cat wc rpcalc calc ltcalc mfcalc
 all: ${targets}
 
