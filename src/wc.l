@@ -1,4 +1,7 @@
 %{
+
+#include <err.h>
+
 	static int nline = 0;
 	static int nchar = 0;
 	static int nword = 0;
@@ -98,7 +101,7 @@ static int has_next_file() {
 static FILE* next_file() {
 	FILE *in = fopen(*fpath++, "r");
 	if (in == NULL)
-		err(errno, *fpath);
+		err(errno, "%s", *fpath);
 	return in;
 }
 

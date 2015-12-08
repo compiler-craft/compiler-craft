@@ -6,7 +6,7 @@
 
 /********** globals ************/
 static char **fpath;
-static lino = -1;
+static int lino = -1;
 
 /********** functions **********/
 static FILE* next_file();
@@ -22,6 +22,10 @@ static int has_next_file();
 		printf("%8d  ", ++lino);
 	}
 	ECHO;
+}
+
+^\n {
+	printf("%8d\n", ++lino);
 }
 
 <<EOF>> {
@@ -65,7 +69,7 @@ static int has_next_file() {
 static FILE* next_file() {
 	FILE *in = fopen(*fpath++, "r");
 	if (in == NULL)
-		err(errno, *fpath);
+		err(errno, "%s", *fpath);
 	return in;
 }
 
