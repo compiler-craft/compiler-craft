@@ -1,0 +1,7 @@
+all: cat wc
+
+wc: wc.c
+
+cat: cat.c
+
+cat.c: cat.l
