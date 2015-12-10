@@ -17,15 +17,11 @@ static int has_next_file();
 
 %%
 
-^. {
+^.|\n {
 	if (lino >= 0) {
 		printf("%8d  ", ++lino);
 	}
 	ECHO;
-}
-
-^\n {
-	printf("%8d\n", ++lino);
 }
 
 <<EOF>> {
