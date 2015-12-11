@@ -6,6 +6,7 @@
 	static int nchar = 0;
 	static int nword = 0;
 	static int nbyte = 0;
+
 	static int opt_flags = 0;
 
 	static char **fpath;
@@ -16,14 +17,14 @@
 	static void reset();
 %}
 
-CHAR .
-WORD [a-zA-Z0-9_-]+
 LINE \n
+WORD [^ \t\n]+
+CHAR .
 
 %%
 {LINE} { ++nline; ++nchar; }
-{CHAR} { ++ nchar; }
 {WORD} { ++nword; nchar += yyleng; }
+{CHAR} { ++ nchar; }
 <<EOF>> {
 	report();
 	reset();
